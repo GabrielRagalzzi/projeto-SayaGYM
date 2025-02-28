@@ -1,0 +1,69 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & nav{
+        width: 95vw;
+        gap: 15px;
+        margin-left: 28px;
+        
+        position:fixed;
+        top: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    
+        background-color: #FFFF;
+        box-shadow: -5px 3px 10px rgb(94, 94, 94);
+        border-radius: 20px;
+        border: 1px solid rgb(90, 90, 90);
+        font-family: fantasy;
+    }
+    
+}
+.principal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-image: url(https://wallpapersok.com/images/hd/sci-fi-space-red-planet-gzr4fovct2d4bmer.jpg);
+    background-size: cover;
+
+    & .conteudo{
+        margin-top: 9%;
+        margin-left: 80px;
+        max-inline-size: 345px;
+    
+        & .titulo{
+            line-height: 75px;
+            letter-spacing: 3px;
+            font-size: 50px;
+            color: aliceblue;
+            font-family: fantasy;
+        }
+
+    }
+    & .imagem{
+        margin-left: 210px;
+        & img{
+            width: 636px;
+            height: 641px;
+        }
+    }
+}
+footer{
+    height: 350px;
+    background-color: black;
+    color: azure;
+}
+#linha{
+    height: 2px;
+    background-color: azure;
+}
