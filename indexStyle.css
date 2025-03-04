@@ -24,15 +24,38 @@ body{
         box-shadow: -5px 3px 10px rgb(94, 94, 94);
         border-radius: 20px;
         border: 1px solid rgb(90, 90, 90);
-        font-family: fantasy;
+
+        & .atalhos{
+            width: 160px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: fantasy;
+
+            background-color: #FFFF;
+            color: black;
+        }
+        & .atalhos:hover{
+            width: 160px;
+            height: 30px;
+            border-radius: 20px;
+            scale: 1.1;
+            background-image: linear-gradient(to right, #ffbf59, #F99C06);
+            transition: 0.3s;
+        }
+        
     }
     
 }
 .principal{
     width: 100%;
     height: 100vh;
+
     display: flex;
     flex-direction: row;
+
     background-image: url(https://wallpapersok.com/images/hd/sci-fi-space-red-planet-gzr4fovct2d4bmer.jpg);
     background-size: cover;
 
@@ -49,6 +72,27 @@ body{
             font-family: fantasy;
         }
 
+        & #botao{
+            width: 320px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #FFFF;
+            border-radius: 20px;
+            border: transparent;
+            box-shadow: 5px 5px 0px #F99C06;
+
+            & a{
+                text-decoration: none;
+                font-family: fantasy;
+                font-size: 26px;
+                color: black;
+            }
+        }
+
     }
     & .imagem{
         margin-left: 210px;
@@ -58,12 +102,139 @@ body{
         }
     }
 }
+.complemento{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url("imgs/fundo.avif");
+    background-size: cover;
+
+    & .fundo-titulo{
+        width: 80vw;
+        height: 90px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 20px;
+        border: #ff9100 3px solid;
+
+        background-color: #F99C06;
+            & .sub-titulo{
+            letter-spacing: 1px;
+            font-size: 50px;
+            color: #071956;
+            font-family: fantasy;
+        }
+    }
+    
+
+    & .container{
+        width: 95vw;
+        height: 70vh;
+
+        display: flex;
+        flex-direction: row;
+        
+
+        & .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            flex-grow: 1;
+            margin-top: 70px;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 20px;
+
+            background-color: #F99C06;
+            border: #ff9100 3px solid;
+
+            & #fundo{
+                width: 80%;
+                height: 50px;
+
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                padding: 10px;
+                border-radius: 15px;
+                
+                background-color: #ED6407;
+                    & h2{
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    color: #071956;
+                    font-family: fantasy; 
+                }
+            }
+            
+
+            & p{
+                padding-top: 30px;
+                margin: 15px;
+                max-height: 230px;
+                line-height: 30px;
+                
+                letter-spacing: 1px;
+                font-size: 20px;
+                color: #071956;
+                font-family: fantasy;
+            }
+        }
+    }
+}
 footer{
     height: 350px;
+
     background-color: black;
-    color: azure;
+
+    & #link{
+        margin-left: 50px;
+
+        font-size: 17px;
+        color: azure;
+        font-family: fantasy;
+        cursor: pointer;
+    }
+    & #copyright{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        color: azure;
+        font-family: fantasy;
+    }
+
+    & .sociais{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        & img{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        & img:hover{
+            scale: 1.05;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px #292929;
+        }
+    }
+    
 }
+
 #linha{
     height: 2px;
+    margin-top: 70px;
     background-color: azure;
 }
