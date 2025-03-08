@@ -1,0 +1,218 @@
+/* IMPORTAÇÃO DA FONTE */
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+/* ESTILOS GERAIS DO CORPO */
+
+body {
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    margin: 0; /* Remover margens */
+    border: 0; /* Remover bordas */
+    display: flex; /* Usar flexbox para centralizar os itens */
+    flex-direction: column; /* Organizar os itens em coluna */
+    justify-content: center; /* Centralizar o conteúdo verticalmente */
+
+    /* ESTILOS DA NAVEGAÇÃO */
+    & nav{
+        width: 95vw;
+        gap: 15px;
+        margin-left: 28px;
+        
+        position:fixed;
+        top: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    
+        background-color: #FFFF;
+        box-shadow: -5px 3px 10px rgb(94, 94, 94);
+        border-radius: 20px;
+        border: 1px solid rgb(90, 90, 90);
+        z-index: 2;
+
+        & .atalhos{
+            width: 160px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: fantasy;
+
+            background-color: #FFFF;
+            color: black;
+        }
+        & .atalhos:hover{
+            width: 160px;
+            height: 30px;
+            border-radius: 20px;
+            scale: 1.1;
+            background-image: linear-gradient(to right, #ffbf59, #F99C06);
+            transition: 0.3s;
+        }
+        
+    }
+    
+}
+
+/* ESTILOS DA SEÇÃO PRINCIPAL */
+.principal {
+    width: 100%; /* Largura total */
+    height: 104vh; /* Altura de 104% da tela */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Gradiente escuro */
+        url(/assets/imgs/capsule-corp.webp); /* Imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    align-items: center; /* Centralizar o conteúdo verticalmente */
+
+    /* ESTILOS DO CONTEÚDO DENTRO DA SEÇÃO PRINCIPAL */
+    & .conteudo {
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* ESTILOS DO TÍTULO NA SEÇÃO PRINCIPAL */
+    & #titulo {
+        font-size: 100px; /* Tamanho da fonte */
+        color: aliceblue; /* Cor do texto */
+        font-family: fantasy; /* Fonte 'fantasy' */
+    }
+}
+
+/* ESTILOS DAS SEÇÕES */
+section {
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+}
+
+
+/* ESTILOS DAS SEÇÕES HORIZONTAIS */
+section.horizontal {
+    width: 100%; /* Largura total */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Gradiente escuro */
+        url(/assets/imgs/fundoSuplementacao.webp); /* Imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-attachment: fixed; /* Imagem fixa durante o scroll */
+    overflow-x: hidden; /* Impede o overflow horizontal */
+}
+
+/* ESTILOS DO WRAPPER DE ANIMAÇÃO */
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+    display: flex; /* Usar flexbox */
+    position: relative; /* Posicionamento relativo */
+    z-index: 1; /* Camada acima dos outros elementos */
+    height: 100vh; /* Altura total da tela */
+}
+
+.item {
+    position: relative;
+    flex: 0 0 500px;
+    height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mantém a imagem centralizada */
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: transparent;
+    padding: 150px 80px; /* Mantendo o mesmo espaçamento que você usou antes */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Para manter a proporção da imagem */
+    overflow: hidden;
+    border-radius: 41px;
+    display: flex; /* Para alinhar corretamente */
+    justify-content: center;
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
+    height: inherit; /* Mantém a altura definida no .item */
+    border-radius: 41px;
+}
+
+/* SOBREPOSIÇÃO */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 41px;
+}
+
+/* EXIBIÇÃO DA SOBREPOSIÇÃO NO HOVER */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* TEXTO */
+.text {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    text-align: justify;
+    margin: 20px auto; /* Espaçamento superior e inferior + centraliza o bloco */
+    padding: 20px;
+}
+
+
+footer{
+    height: 350px;
+
+    background-color: black;
+
+    & #link{
+        margin-left: 50px;
+
+        font-size: 17px;
+        color: azure;
+        font-family: fantasy;
+        cursor: pointer;
+    }
+    & #copyright{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        color: azure;
+        font-family: fantasy;
+    }
+
+    & .sociais{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        & img{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        & img:hover{
+            scale: 1.05;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px #292929;
+        }
+    }
+    
+}
+
+#linha{
+    height: 2px;
+    margin-top: 70px;
+    background-color: azure;
+}
