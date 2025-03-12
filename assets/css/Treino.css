@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+
+    & nav {
+        width: 85vw;
+        height: 55px;
+        gap: 15px;
+        margin-left: 7%;
+
+        position: fixed;
+        top: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        background-color: #FFFF;
+        box-shadow: -5px 3px 10px rgb(94, 94, 94);
+        border-radius: 20px;
+        border: 1px solid rgb(90, 90, 90);
+
+        & .atalhos {
+            width: 160px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: fantasy;
+
+            background-color: #FFFF;
+            color: black;
+        }
+
+        & .atalhos:hover {
+            width: 160px;
+            height: 30px;
+            border-radius: 20px;
+            scale: 1.1;
+            background-image: linear-gradient(to right, #ffbf59, #F99C06);
+            transition: 0.3s;
+        }
+
+        & img {
+            width: 90px;
+            height: 50px;
+        }
+    }
+}
+
+
+.primeira-secao {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(/assets/imgs/fundo-treino-em-casa.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+
+    & h1 {
+        color: white;
+        text-align: center;
+        font-size: 6rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+.segunda-secao {
+    width: 100vw;
+    height: 380vh;
+    background: linear-gradient(rgb(0,0,0, 0.30), rgb(0,0,0, 0.30)), url(/assets/imgs/treino-em-casa-fundo.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    & img {
+        width: 40vw;
+        height: 40vh;
+        align-items: left;
+    }
+}
+
+h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.imagem-e-texto {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.texto {
+    color: white;
+    font-size: 1.6em;
+    max-width: 600px;
+    text-align: initial;
+    line-height: 1.3;
+    font-family: Arial, sans-serif;
+}
+footer{
+    height: 350px;
+    padding-top: 30px;
+
+    background-color: black;
+
+    & #link{
+        margin-left: 50px;
+
+        font-size: 17px;
+        color: azure;
+        font-family: fantasy;
+        cursor: pointer;
+    }
+    & #copyright{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        color: azure;
+        font-family: fantasy;
+    }
+
+    & .sociais{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        & img{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        & img:hover{
+            scale: 1.05;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px #292929;
+        }
+    }
+    
+}
+
+#linha{
+    height: 2px;
+    margin-top: 70px;
+    background-color: azure;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Cabeçalho da tabela */
+th {
+    background: linear-gradient(45deg, #0077b6, #00b4d8); /* Azul para ciano */
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Linhas da tabela */
+td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #d9e2ec; /* Cinza claro */
+}
+
+/* Categorias principais */
+tr.categoria td {
+    background: #8ecae6; /* Azul claro */
+    color: #023047; /* Azul escuro */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Linhas alternadas para melhorar a leitura */
+tr:nth-child(even) {
+    background-color: #e0e7ef; /* Cinza azulado */
+}
+
+/* Destaque para os títulos das seções (Membros Inferiores, etc.) */
+td[rowspan] {
+    background-color: #219ebc; /* Azul médio */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-right: 2px solid #0077b6; /* Azul escuro */
+}
+
+/* Ajuste para responsividade */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    td, th {
+        padding: 10px;
+    }
+} 
+
+/* Hover para interatividade */
+tr{
+    background-color: #caf0f8; /* Ciano claro */
+    transition: 0.3s ease;
+} 
+
+/* Borda arredondada no topo da tabela */
+tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+} 
+
+/* Borda arredondada no final da tabela */
+tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
