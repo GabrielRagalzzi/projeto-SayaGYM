@@ -289,8 +289,9 @@ body {
     font-size: 14px;
 }
 
-@media screen and (max-width:412px) {
+@media (max-width:450px) {
     nav {
+        display: flex;
         flex-direction: column;
         height: 2rem;
         padding: 6px 12px;
