@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 
     & nav {
         width: 85vw;
@@ -20,6 +21,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        z-index: 3;
 
         background-color: #FFFF;
         box-shadow: -5px 3px 10px rgb(94, 94, 94);
@@ -61,16 +63,20 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    gap: 100px;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-image: url(https://wallpapersok.com/images/hd/sci-fi-space-red-planet-gzr4fovct2d4bmer.jpg);
     background-size: cover;
 
-    & .conteudo{
+
+    & .conteudo {
         margin-top: 9%;
         margin-left: 80px;
         max-inline-size: 345px;
-    
-        & .titulo{
+
+        & .titulo {
             line-height: 75px;
             letter-spacing: 3px;
             font-size: 50px;
@@ -101,14 +107,17 @@ body {
 
     }
 
-    & .imagem{
-        margin-left: 210px;
-        
-        & img{
-            width: 400px;
-            height: 405px;
-        }
+
+
+    & img {
+        max-width: 100%;
+        width: 50vw;
+        align-items: flex-end;
+        height: auto;
+        display: block;
+        position: relative;
     }
+
 }
 
 .complemento {
@@ -202,54 +211,100 @@ body {
     }
 }
 
-footer {
-    width: 100vw;
-    height: 350px;
-
+.footer {
     background-color: black;
-
-    & #link {
-        margin-left: 50px;
-
-        font-size: 17px;
-        color: azure;
-        font-family: fantasy;
-        cursor: pointer;
-    }
-
-    & #copyright {
-        display: flex;
-        justify-content: center;
-        font-size: 12px;
-        color: azure;
-        font-family: fantasy;
-    }
-
-    & .sociais {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        & img {
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
-
-            margin-top: 30px;
-            cursor: pointer;
-        }
-
-        & img:hover {
-            scale: 1.05;
-            transition: 0.3s;
-            box-shadow: 0px 0px 10px #292929;
-        }
-    }
-
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
 }
 
-#linha {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-text {
+    color: gray;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: white;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-socials img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.footer-line {
+    width: 100%;
     height: 2px;
-    margin-top: 70px;
-    background-color: azure;
+    background-color: gray;
+    margin-top: 20px;
+}
+
+.footer-copyright {
+    color: gray;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media screen and (max-width:412px) {
+    nav {
+        flex-direction: column;
+        height: 2rem;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+
+
+        & .atalhos {
+            align-items: center;
+
+            & p {
+                font-size: 8px;
+                width: 40px;
+            }
+        }
+
+    }
 }

@@ -9,7 +9,9 @@ table{
     border-collapse: collapse;
 }
 
-h2{
+
+
+.h2-principal{
     font-size: 20px;
     margin-top: 50px ;
     width: 70%;
@@ -48,12 +50,14 @@ h3{
 }
 
 .titulo-1{
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    background: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url("/assets/imgs/fundino.jpg");
+    background-size: cover;
+    color: #d5d6d1;
+    font-family: fantasy;
     margin-left: auto;
     width: 100%;
+    height: 100vh;
     display: flex;
-    color: rgb(28, 201, 22);
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -104,51 +108,7 @@ body{
     justify-content: center;
     overflow-x: hidden;
 
-    footer {
-        width: 100vw;
-        height: 350px;
     
-        background-color: black;
-    
-        & #link {
-            margin-left: 50px;
-    
-            font-size: 17px;
-            color: azure;
-            font-family: fantasy;
-            cursor: pointer;
-        }
-    
-        & #copyright {
-            display: flex;
-            justify-content: center;
-            font-size: 12px;
-            color: azure;
-            font-family: fantasy;
-        }
-    
-        & .sociais {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-    
-            & img {
-                width: 70px;
-                height: 70px;
-                border-radius: 100%;
-    
-                margin-top: 30px;
-                cursor: pointer;
-            }
-    
-            & img:hover {
-                scale: 1.05;
-                transition: 0.3s;
-                box-shadow: 0px 0px 10px #292929;
-            }
-        }
-    
-    }
 
     & nav {
         width: 85vw;
@@ -180,7 +140,7 @@ body{
 
         & .atalhos:hover {
             width: 160px;
-            height: 30px;
+            height: 40px;
             border-radius: 20px;
             scale: 1.1;
             background-image: linear-gradient(to right, #ffbf59, #F99C06);
@@ -194,3 +154,135 @@ body{
     }  
 }
 
+@media screen and (max-width: 412px){
+    body{
+        background-size: 145vw 145vw;
+        background-position: top;
+        width: 60vw;
+        background-color: black;
+        background-attachment: fixed;
+    }
+    .titulo-1{
+        margin-top: 45vw;
+        width: 20vw;
+    }
+    h2{
+        width: 90vw;
+        font-size: 8vw;
+        margin-top: 47vw;
+        margin-left:5em;
+        text-align: center;
+        text-indent: 0px;
+    }
+    h3{
+        width: 90vw;
+        font-size: 8vw;
+        margin-left:5em;
+        text-align: center;
+        text-indent: 0px;
+    }
+    table{
+        width: 80vw;
+        margin-left: 10em;
+    }
+    h4{
+        font-size: 4vw;
+        margin-left: 10em;
+        width: 80vw;
+    }
+    nav {
+        flex-direction: column;
+        height: 2rem;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        
+        
+        & .atalhos{
+            align-items: center;
+
+            & p{
+                font-size: 8px;    
+                width: 40px;
+            }
+        }
+
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-text {
+    color: gray;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: white;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-socials img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.footer-line {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+    margin-top: 20px;
+}
+
+.footer-copyright {
+    color: gray;
+    margin-top: 10px;
+    font-size: 14px;
+}
